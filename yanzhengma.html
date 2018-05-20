@@ -8,9 +8,10 @@
 <body>
 
 
-<canvas id="myCanvas" width="500px" height="500px" style="border: 1px blue solid">
+<canvas id="myCanvas" width="640px" height="640px" style="border: 1px blue solid">
     <img src="img/1.jpg" id="1"/>
-    <img src="img/d1.jpg" height="368" width="500"/>
+    <img src="img/d1.jpg" id="dl"/>
+    <img src="img/f1.jpg"  id="f1"/>
 </canvas>
 </body>
 </html>
@@ -21,7 +22,16 @@
     ctx.font="30px Arial";
     ctx.fillText("请输入验证码",10,50);
 
-    var img = document.getElementById("1");
-    ctx.drawImage(img,10,100,100,100);
+    var img01 = document.getElementById("1");
+    ctx.drawImage(img01,10,100,200,200);
+
+    var img02 = document.getElementById("dl");
+    ctx.drawImage(img02,220,100,200,200);
+
+    var img03 = document.getElementById("f1");
+    ctx.drawImage(img03,440,100,200,200);
+
+    var img04 = document.getElementById("f1");
+    ctx.drawImage(img04,10,100,200,200);
 
 </script>
