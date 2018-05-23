@@ -1,37 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>验证码</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta  charset="utf-8">
+    <title>html5测试</title>
+
+    <script type="text/javascript">
+        window.onload=function (){
+            o.imgRandom();
+            l.imgRandom();
+            i.imgRandom();
+            m.imgRandom();
+            n.imgRandom();
+            p.imgRandom();
+        }
+        var o= {
+            aImg: ['1', '2', '3', '4'], /*图片路径*/
+            imgRandom: function () {
+                var img = document.getElementsByClassName("01")[0];
+                var b = Math.random() * 4;
+                b = Math.floor(b) % (this.aImg.length);
+                img.src = "img/" + this.aImg[b] + ".jpg";
+            }
+        }
+         var l = {
+                    aImg:['d1', 'd2', 'd3', 'd4'], /*图片路径*/
+            imgRandom:function () {
+                        var img = document.getElementsByClassName("02")[0];
+                        var b = Math.random() * 5;
+                        b = Math.floor(b) % (this.aImg.length);
+                        img.src = "img/" + this.aImg[b] + ".jpg";
+                 }
+             }
+
+        var i = {
+            aImg:['f1', 'f2', 'f3', 'f4'], /*图片路径*/
+            imgRandom:function () {
+                var img = document.getElementsByClassName("03")[0];
+                var b = Math.random() * 5;
+                b = Math.floor(b) % (this.aImg.length);
+                img.src = "img/" + this.aImg[b] + ".jpg";
+            }
+        }
+
+        var i = {
+            aImg:['f1', 'f2', 'f3', 'f4'], /*图片路径*/
+            imgRandom:function () {
+                var img = document.getElementsByClassName("03")[0];
+                var b = Math.random() * 5;
+                b = Math.floor(b) % (this.aImg.length);
+                img.src = "img/" + this.aImg[b] + ".jpg";
+            }
+        }
+
+        var m = {
+            aImg:['mao1', 'mao2', 'mao3', 'mao4'], /*图片路径*/
+            imgRandom:function () {
+                var img = document.getElementsByClassName("04")[0];
+                var b = Math.random() * 5;
+                b = Math.floor(b) % (this.aImg.length);
+                img.src = "img/" + this.aImg[b] + ".jpg";
+            }
+        }
+        var n = {
+            aImg:['q1', 'q2', 'q3', 'q4'], /*图片路径*/
+            imgRandom:function () {
+                var img = document.getElementsByClassName("05")[0];
+                var b = Math.random() * 5;
+                b = Math.floor(b) % (this.aImg.length);
+                img.src = "img/" + this.aImg[b] + ".jpg";
+            }
+        }
+        var p = {
+            aImg:['z1', 'z2', 'z3', 'z4'], /*图片路径*/
+            imgRandom:function () {
+                var img = document.getElementsByClassName("06")[0];
+                var b = Math.random() * 5;
+                b = Math.floor(b) % (this.aImg.length);
+                img.src = "img/" + this.aImg[b] + ".jpg";
+            }
+        }
+
+    </script>
+
 <body>
+<img  class="01" src="img/1.jpg"/>
+<img  class="02" src="img/d1.jpg"/>
+<img  class="03" src="img/f1.jpg"/>
+<img  class="04" src="img/mao1.jpg"/>
+<img  class="05" src="img/q1.jpg"/>
+<img  class="06" src="img/z1.jpg"/>
 
 
-<canvas id="myCanvas" width="640px" height="640px" style="border: 1px blue solid">
-    <img src="img/1.jpg" id="1"/>
-    <img src="img/d1.jpg" id="dl"/>
-    <img src="img/f1.jpg"  id="f1"/>
-</canvas>
 </body>
 </html>
-
-<script>
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.font="30px Arial";
-    ctx.fillText("请输入验证码",10,50);
-
-    var img01 = document.getElementById("1");
-    ctx.drawImage(img01,10,100,200,200);
-
-    var img02 = document.getElementById("dl");
-    ctx.drawImage(img02,220,100,200,200);
-
-    var img03 = document.getElementById("f1");
-    ctx.drawImage(img03,440,100,200,200);
-
-    var img04 = document.getElementById("f1");
-    ctx.drawImage(img04,10,100,200,200);
-
-</script>
